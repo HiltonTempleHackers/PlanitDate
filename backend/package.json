@@ -1,0 +1,28 @@
+{
+  "name": "planit-date",
+  "version": "1.0.0",
+  "description": "Plan a date for user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiltonTempleHackers/PlanitDate.git"
+  },
+  "author": "Hilton Hackers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HiltonTempleHackers/PlanitDate/issues"
+  },
+  "homepage": "https://github.com/HiltonTempleHackers/PlanitDate#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.10",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
