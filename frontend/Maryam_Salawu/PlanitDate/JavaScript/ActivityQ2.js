@@ -31,7 +31,7 @@
         <br/>
         <br/>
         <p class="lead">
-           <span onclick="lastQuestion()" id="button" class="btn btn-lg btn-secondary">Next</span>
+           <span onclick="POST" id="button" class="btn btn-lg btn-secondary">Submit</span>
         </p>
         </p>
 `;

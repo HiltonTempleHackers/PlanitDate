@@ -94,6 +94,7 @@
   <ItemGroup>
     <Content Include="CSS\StyleSheet.css" />
     <Content Include="FoodForm.html" />
+    <Content Include="Images\heart.png" />
     <Content Include="JavaScript\ActivityQ1.js" />
     <Content Include="JavaScript\ActivityQ2.js" />
     <Content Include="JavaScript\btnClick.js" />
