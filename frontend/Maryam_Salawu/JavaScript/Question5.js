@@ -1,6 +1,4 @@
 ﻿function Question5() {
-    answers.StartTime = document.getElementById("startTime").value;
-    answers.EndTime = document.getElementById("endTime").value;
     answers.Date = document.getElementById("date").value;
 
     var contentHolder = document.getElementById("Question");

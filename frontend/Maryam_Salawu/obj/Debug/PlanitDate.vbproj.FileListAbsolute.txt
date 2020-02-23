@@ -58,3 +58,6 @@ C:\Users\marya\source\repos\PlanitDate\PlanitDate\obj\Debug\PlanitDate.vbproj.Co
 C:\Users\marya\source\repos\PlanitDate\PlanitDate\obj\Debug\PlanitDate.dll
 C:\Users\marya\source\repos\PlanitDate\PlanitDate\obj\Debug\PlanitDate.xml
 C:\Users\marya\source\repos\PlanitDate\PlanitDate\obj\Debug\PlanitDate.pdb
+C:\Users\marya\source\repos\Dragon_Hacks\PlanitDate\frontend\Maryam_Salawu\obj\Debug\PlanitDate.dll
+C:\Users\marya\source\repos\Dragon_Hacks\PlanitDate\frontend\Maryam_Salawu\obj\Debug\PlanitDate.xml
+C:\Users\marya\source\repos\Dragon_Hacks\PlanitDate\frontend\Maryam_Salawu\obj\Debug\PlanitDate.pdb

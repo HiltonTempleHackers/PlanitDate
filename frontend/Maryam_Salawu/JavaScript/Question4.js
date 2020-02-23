@@ -12,8 +12,6 @@
         <p class="lead"> What time of day would you like?</p>
         <p class="lead">
          <input type="text" id = "date" placeholder= "Date ex. 02/13/2020">
-        <input type="text" id = "startTime" placeholder="Time ex. 9:00 AM">
-        <input type="text" id = "endTime" placeholder="Time ex. 12:00 PM">
  </p>
 <br />
  <br />
