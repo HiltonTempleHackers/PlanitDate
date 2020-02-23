@@ -7,6 +7,8 @@ function question4(){
         <h1 class="cover-heading">First Date Ideas</h1>
         <p class="lead">What time of day would you like?</p>
         <p class="lead">
+            <input id="txtDate" type="text" placeholder="Date ex. 02-24-2020">
+            <div style='clear:both'></div>
             <input id="txtStartTime" type="text" placeholder="Time ex. 12:00 PM">
             <input id="txtEndTime" type="text" placeholder="Time ex. 4:00 PM">
         </p>

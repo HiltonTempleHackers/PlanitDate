@@ -1,7 +1,8 @@
 function question5(){
     //save previous question data to object
     choices.startTime = document.getElementById('txtStartTime').text;    
-    choices.endTime = document.getElementById('txtEndTime').text;   
+    choices.endTime = document.getElementById('txtEndTime').text; 
+    choices.date = document.getElementById('txtDate').text;  
     
     
 
