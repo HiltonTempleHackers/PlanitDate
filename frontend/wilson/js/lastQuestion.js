@@ -4,6 +4,15 @@
 // '#' if next, 'actual link to submit 
 
 function lastQuestion(){
+    if(document.getElementById('indoor').disabled){
+        choices.activity = document.getElementById('outdoor').value;
+    }
+    else{
+        choices.activity = document.getElementById('indoor').value;
+    }
+
+    console.log(choices)
+
     var contentHolder = document.getElementById("contentArea");
     var content = `
         <h1 class="cover-heading">First Date Ideas</h1>

@@ -8,10 +8,10 @@ function question3(){
         <p class="lead"> What is your price range?</p>
         <p class="lead">
         <select id="priceRange">
-            <option value="1">$</option>
-            <option value="2">$$</option>
-            <option value="3">$$$</option>
-            <option value="4">$$$$</option>
+            <option value="$">$</option>
+            <option value="$$">$$</option>
+            <option value="$$$">$$$</option>
+            <option value="$$$$">$$$$</option>
         </select>
         <br/>
         <br/>

@@ -1,6 +1,8 @@
 //ask type of food
 function foodQ2(){
     //save previous question data to object
+    var choices2 = {};
+    choices2.price = document.getElementById('priceRange').value;
 
     var contentHolder = document.getElementById("contentArea");
     var content = `

@@ -95,6 +95,21 @@ body {
 }
 
 
+.card-deck .card-body{
+    text-align: center;
+    width: 100%;
+}
+
+.card{
+    border: thin black;
+    height: 50%;
+    width: 50%;
+    background-color: #e7aab7;
+    display: inline-block
+}
+
+
+
 /*
  * Cover
  */

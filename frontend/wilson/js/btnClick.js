@@ -7,10 +7,14 @@ function btnClick(me, opposite){
 
     if (me.id === 'btnIndoor'){
         choices.indoor = true;
+        document.getElementById('indoor').disabled = false;
+        document.getElementById('outdoor').disabled = true;
     } 
     
     else if (me.id === 'btnOutdoor') {
         choices.indoor = false;
+        document.getElementById('indoor').disabled = true;
+        document.getElementById('outdoor').disabled = false;
     }
 
     else if (me.id === 'btnYes'){
