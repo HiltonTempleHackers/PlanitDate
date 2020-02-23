@@ -1,8 +1,4 @@
-﻿/*
- * Globals
- */
-
-/* Links */
+﻿
 a,
 a:focus,
 a:hover {
@@ -53,8 +49,15 @@ body {
 }
 
 .masthead-brand {
-    margin-bottom: 0;
-    position:relative;
+    position: relative;
+    top: 100px;
+    font-family:'Caveat Brush';
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-left: 16%;
+    text-shadow:10px 10px 2px rgba(0, 0, 0, .5);
 }
 
 .nav-masthead .nav-link {

@@ -1,5 +1,6 @@
 ﻿function Question2() {
-
+    var AnswerTwo = new Object();
+    AnswerTwo.Food = document.getElementById("food").value;
     document.getElementById("Question").innerHTML = "";
     document.getElementById("Question").innerHTML = question3;
 

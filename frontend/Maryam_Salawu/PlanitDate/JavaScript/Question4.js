@@ -1,27 +1,26 @@
 ﻿function Question4() {
-
+    var AnswerFour = new Object();
+    AnswerFour.popularity = document.getElementById("popularity").value;
     document.getElementById("Question").innerHTML = "";
     document.getElementById("Question").innerHTML = question5;
+    var AnswerFive = new Object();
+    AnswerFive.StartTime = document.getElementById("startTime").value;
+    AnswerFive.EndTime = document.getElementById("endTime").value;
 
 }
 
 var question5 = `
 <h1 class="cover-heading">First Date Ideas</h1>
-        <p class="lead"> What is your popularity preference?</p>
+        <p class="lead"> What time of day would you like?</p>
         <p class="lead">
-           <select id="priceRange">
-  <option value="1">1 star</option>
-  <option value="2">2 star</option>
-  <option value="3">3 star</option>
-  <option value="4">4 star</option>
- <option value="5">5 star</option>
-</select>
-
+        <input type="text" id = "startTime" placeholder="Time ex. 9:00 AM">
+        <input type="text" id = "endTime" placeholder="Time ex. 12:00 PM">
+ </p>
 
 <br />
  <br />
                 <p class="lead">
-                    <a href="#"  id="button" onclick="Question5()"class="btn btn-lg btn-secondary">Next</a>
+                   <input type="submit"  id="button" value="Submit">
                 </p>
        
                     

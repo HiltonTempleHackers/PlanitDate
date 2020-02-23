@@ -98,7 +98,6 @@
     <Content Include="JavaScript\Question2.js" />
     <Content Include="JavaScript\Question3.js" />
     <Content Include="JavaScript\Question4.js" />
-    <Content Include="JavaScript\Question5.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
