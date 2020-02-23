@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -14,53 +14,28 @@
     <title>PlanIt Date</title>
 </head>
 
-<body class="text-center" cz-shortcut-listen="true">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">PlanIt Date</h3>
-                <!--
-        <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-    </nav>
+<body cz-shortcut-listen="true" style='padding: 25px; text-align:center;background-color: #e9e7dd;'>
+    <img style='margin-top: 50px;margin-left: auto; margin-right: auto; display: block; width:25%; height: 55%' src='pics/heart.png'/>
 
-        -->
-
-            </div>
-        </header>
-
-        <main role="main" class="inner cover" id="contentArea">
-            <!-- Content is injected by js functions-->
-            
-
-        </main>
-
-        <footer class="mastfoot mt-auto">
-            <div class="inner">
-                <p>Hilton Hackers</p>
-            </div>
-        </footer>
+    
+    <div style='position: absolute; bottom:165px; color:black;margin-left: 595px;font-size: 30px;'>
+        Don't give up on love!
+        
+        <p class="lead" style='position:relative;top:20px;'>
+            <a href="home.html" class="btn btn-lg btn-secondary" id="btnStart">Try Again</a>
+        </p>
     </div>
+
 
     <!-- Script references -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <script src="js/home.js"></script>
-    <script src="js/start.js"></script>
+    <script src="js/components/contentCard.js"></script>
     <script>
         //main code here
         'use strict';
-        home('contentArea')
-
-        var startBtn = document.getElementById('btnStart');
-        startBtn.onclick = function () {
-            document.body.style.backgroundColor = "#e7aab7";
-            start('contentArea')
-        }
+      
     </script>
 </body>
 </html>
