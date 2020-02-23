@@ -1,4 +1,4 @@
-const _apiHost = 'https://api.service.com/v1';
+const _apiHost = 'https://api.service.com/v1'; //server url
 
 async function request(url, params, method = 'GET') {
 
