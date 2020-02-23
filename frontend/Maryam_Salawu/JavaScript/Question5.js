@@ -1,5 +1,5 @@
 ﻿function Question5() {
-    answers.Date = document.getElementById("date").value;
+    answers.date = document.getElementById("date").value;
 
     var contentHolder = document.getElementById("Question");
     var content = `

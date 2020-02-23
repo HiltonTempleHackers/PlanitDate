@@ -1,5 +1,5 @@
 function ActivityOption() {
-    answers.Price = document.getElementById("priceRange").innerText;
+    answers.priceRange = document.getElementById("priceRange").innerText;
     var contentHolder = document.getElementById("Question");
 
 

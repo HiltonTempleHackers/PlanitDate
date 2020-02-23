@@ -1,6 +1,6 @@
 function Activity2() {
     var answers2 = {};
-    answers2.Food = document.getElementById("priceRange").value;
+    answers2.priceRange = document.getElementById("priceRange").value;
 
 
     var contentHolder = document.getElementById("Question");

@@ -1,6 +1,6 @@
 ﻿function Question3() {
 
-    answers.Food = document.getElementById("food").value;
+    answers.food = document.getElementById("food").value;
     var contentHolder = document.getElementById("Question");
 
 
