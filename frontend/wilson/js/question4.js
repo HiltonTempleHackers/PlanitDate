@@ -9,8 +9,6 @@ function question4(){
         <p class="lead">
             <input id="txtDate" type="text" placeholder="Date ex. 02-24-2020">
             <div style='clear:both'></div>
-            <input id="txtStartTime" type="text" placeholder="Time ex. 12:00 PM">
-            <input id="txtEndTime" type="text" placeholder="Time ex. 4:00 PM">
         </p>
         <br/>
         <br/>

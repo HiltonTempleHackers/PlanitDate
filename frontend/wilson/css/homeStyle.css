@@ -98,6 +98,7 @@ body {
 .card-deck .card-body{
     text-align: center;
     width: 100%;
+    
 }
 
 .card{
@@ -106,6 +107,12 @@ body {
     width: 50%;
     background-color: #e7aab7;
     display: inline-block
+}
+.card-body ,ul {
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -135,3 +142,4 @@ body {
 .mastfoot {
     color: rgba(255, 255, 255, .5);
 }
+

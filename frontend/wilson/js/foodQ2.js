@@ -27,7 +27,7 @@ function foodQ2(){
         <br/>
         <br/>
         <p class="lead">
-            <span onclick="THEPOSTFUNCTION()" id="button" class="btn btn-lg btn-secondary">Next</span>
+            <span onclick="THEPOSTFUNCTION()" id="button" class="btn btn-lg btn-secondary">Submit</span>
         </p>
 `;
     console.log(choices);
