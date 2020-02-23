@@ -3,8 +3,9 @@
     AnswerTwo.Food = document.getElementById("food").value;
     document.getElementById("Question").innerHTML = "";
     document.getElementById("Question").innerHTML = question3;
-
+    return AnswerTwo.Food;
 }
+
 
 var question3 = `
 <h1 class="cover-heading">First Date Ideas</h1>

@@ -1,21 +1,26 @@
 ﻿
 
 function currentQuestion() {
-   var AnswerOne = new Object();
+    var AnswerOne = new Object();
     AnswerOne.State = document.getElementById("state").value;
     AnswerOne.City = document.getElementById("city").value;
     document.getElementById("Question").innerHTML = "";
     document.getElementById("Question").innerHTML = question2;
+    return AnswerOne.State;
+    return AnswerOne.City;
+
    
 
-}   
+}
+
+
 
 
 var question2 = `
         <h1 class="cover-heading">First Date Ideas</h1>
         <p class="lead"> What type of food would you like?</p>
         <p class="lead">
-           <select id="food">
+        <select id="food">
   <option value="Chinese">Chinese</option>
   <option value="Indian">Indian</option>
   <option value="Japanese">Japanese</option>

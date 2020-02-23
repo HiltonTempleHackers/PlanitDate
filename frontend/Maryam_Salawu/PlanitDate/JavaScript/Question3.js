@@ -3,7 +3,7 @@
     AnswerThree.Price = document.getElementById("priceRange").value;
     document.getElementById("Question").innerHTML = "";
     document.getElementById("Question").innerHTML = question4;
-
+    return AnswerThree.Price;
 }
 
 var question4 = `
