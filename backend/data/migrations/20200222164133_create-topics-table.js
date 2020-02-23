@@ -1,8 +1,8 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable('questions', tbl => {
+    return knex.schema.createTable('questions', function(tbl) {
         tbl.increments();
-        tbl.text('Question')
+        tbl.text('question')
             .notNullable();
     });
 };
