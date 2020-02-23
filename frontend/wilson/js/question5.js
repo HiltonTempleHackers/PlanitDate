@@ -1,11 +1,12 @@
 function question5(){
     //save previous question data to object
-    choices.startTime = document.getElementById('txtStartTime').value;    
-    choices.endTime = document.getElementById('txtEndTime').value; 
-    choices.date = document.getElementById('txtDate').value;  
+    choices.startTime = moment(document.getElementById('txtStartTime').value, 'h:mm a').format('HH:mm');    
+    choices.endTime = moment(document.getElementById('txtEndTime').value, 'h:mm a').format('HH:mm'); 
+    choices.date = moment(document.getElementById('txtDate').value, 'MM-DD-YYYY').format('MM-DD-YYYY');  
 
     console.log(choices.startTime);
-    console.log(moment(choices.startTime, 'h:mm a').format('HH:mm'));
+    console.log(choices.endTime);
+    console.log(choices.date);
     
 
 
