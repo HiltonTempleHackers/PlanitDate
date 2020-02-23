@@ -1,12 +1,11 @@
 ﻿function Question3() {
-    var AnswerThree = new Object();
-    AnswerThree.Price = document.getElementById("priceRange").value;
-    document.getElementById("Question").innerHTML = "";
-    document.getElementById("Question").innerHTML = question4;
-    return AnswerThree.Price;
-}
+  
+    answers.Food = document.getElementById("food").value;
+    var contentHolder = document.getElementById("Question");
 
-var question4 = `
+
+
+    var content = `
 <h1 class="cover-heading">First Date Ideas</h1>
         <p class="lead"> What is your popularity preference?</p>
         <p class="lead">
@@ -28,3 +27,5 @@ var question4 = `
    </p>
         
 `;
+    contentHolder.innerHTML = content;
+}

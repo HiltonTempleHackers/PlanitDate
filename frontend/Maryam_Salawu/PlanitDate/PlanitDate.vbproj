@@ -92,15 +92,18 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ActivityOption.html" />
     <Content Include="CSS\StyleSheet.css" />
     <Content Include="FoodForm.html" />
+    <Content Include="JavaScript\ActivityQ1.js" />
+    <Content Include="JavaScript\ActivityQ2.js" />
     <Content Include="JavaScript\btnClick.js" />
-    <Content Include="JavaScript\JavaScript.js" />
+    <Content Include="JavaScript\lastQuestion.js" />
     <Content Include="JavaScript\Option.js" />
+    <Content Include="JavaScript\Question1.js" />
     <Content Include="JavaScript\Question2.js" />
     <Content Include="JavaScript\Question3.js" />
     <Content Include="JavaScript\Question4.js" />
+    <Content Include="JavaScript\Question5.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,13 @@
 ﻿function Question4() {
-    var AnswerFour = new Object();
-    AnswerFour.popularity = document.getElementById("popularity").value;
-    document.getElementById("Question").innerHTML = "";
-    document.getElementById("Question").innerHTML = question5;
-    return AnswerFour.popularity;
+    answers.popularity = document.getElementById("popularity").value;
+    var contentHolder = document.getElementById("Question");
+   
 
 
-}
 
-var question5 = `
+
+
+    var content = `
 <h1 class="cover-heading">First Date Ideas</h1>
         <p class="lead"> What time of day would you like?</p>
         <p class="lead">
@@ -20,10 +19,12 @@ var question5 = `
 <br />
  <br />
                 <p class="lead">
-                    <a href="#"  id="button" onclick="ActivityOption()" class="btn btn-lg btn-secondary">Next</a>
+                    <a href="#"  id="button" onclick="Question5()" class="btn btn-lg btn-secondary">Next</a>
                 </p>
        
                     
   
         
 `;
+    contentHolder.innerHTML = content;
+}
