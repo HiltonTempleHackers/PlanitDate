@@ -1,19 +1,28 @@
-function btnClick(me){
+function btnClick(me, opposite){
     console.log(me)
-    if (me.id === 'btnIndoor'){
-        document.getElementById('btnOutdoor').style.backgroundColor = 'white';
-        document.getElementById('btnOutdoor').style.boxShadow = 'none';
-        choices.indoor = true;
-    } 
-    
-    else {
-        document.getElementById('btnIndoor').style.backgroundColor = 'white';
-        document.getElementById('btnIndoor').style.boxShadow = 'none';
-        choices.indoor = false;
-    }
+    document.getElementById(opposite).style.backgroundColor = 'white';
 
     me.style.backgroundColor = '#e9e7dd';
     me.style.boxShadow = '10px 10px 10px black;'
+
+    if (me.id === 'btnIndoor'){
+        choices.indoor = true;
+    } 
+    
+    else if (me.id === 'btnOutdoor') {
+        choices.indoor = false;
+    }
+
+    else if (me.id === 'btnYes'){
+        document.getElementById('button').innerText = 'Next';
+        document.getElementById('button').onclick = function(){foodQ1()};
+    }
+    else if (me.id === 'btnNo'){
+        document.getElementById('button').innerText = 'Submit';
+        document.getElementById('button').onclick = function(){return null}; //function that will POST
+    }
+
+
     console.log(choices);
     console.log(me)
 }
