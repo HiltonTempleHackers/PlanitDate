@@ -4,18 +4,18 @@ const router = express.Router();
 var request = require("request");
 
 
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
     //client stuff
-    var aRating = '1';
-    var aDate = '02-23-2020';
+    var params = req.body;
+    console.log(params)
+    var aRating = params.popularity;
+    var aDate = '07-23-2020';
     var aDay = 2;
-    var aTerm = 'mini_golf';
-    var aLocation = 'Philadelphia,PA';
+    var aTerm = params.activity;
+    var aLocation = params.city + ',' + params.state;
 
     aDate = new Date(aDate);
-    console.log(aDate);
     aDay = aDate.getDay();
-    console.log(aDay);
 
     //yelp stuff
     const key = 'Bearer JwDTfcunrW6e44vbCZU71-qTTn2JQHCB8U2xfl3xZ6UrPl5VwzPQrg5F_auwixaTdSIe8-FKuPew9_qzbFBjokLyy83EL7GmlKl6aNuEXqJguv1fYCMyoOVGypZRXnYx';
@@ -38,6 +38,12 @@ router.get('/', (req, res) => {
             //console.log(response);
 
             const activityJS = JSON.parse(body);
+            console.log('object attrs\n');
+            for (x in activityJS) {
+                console.log(x);
+            }
+            console.log('\n\n\n');
+            console.log(activityJS.businesses);
 
             var filteredActivity = activityJS.businesses.filter(activity => activity.categories.filter(aCategory => {
                 if (aCategory.alias === aTerm) {
@@ -45,7 +51,7 @@ router.get('/', (req, res) => {
                 }
             }));
 
-            filteredActivity = filteredActivity.filter(activity => aRating <= activity.rating);
+            //filteredActivity = filteredActivity.filter(activity => aRating <= activity.rating);
             
             var aLength = filteredActivity.length;
 
@@ -54,9 +60,11 @@ router.get('/', (req, res) => {
             console.log(aIndex);
 
             var activity = filteredActivity[aIndex];
-
+            console.log(filteredActivity)
+            console.log(activity);
         };
-
+        
+        console.log(activity);
         var aName = activity['name'];
         var aUrl = activity['url'];
         var aAddress = activity['location']['display_address'];
@@ -82,8 +90,9 @@ router.get('/', (req, res) => {
                 const parsedBody = JSON.parse(body2);
                 var aOpen = parsedBody.hours[0].open;
                 aOpen = aOpen.filter(aTime => aDay === aTime.day);
-
-                res.send('Name: ' + aName + ' || Phone: ' + aPhone + ' || Address: ' + aAddress);
+                res.header("Access-Control-Allow-Origin", "*");
+                console.log(body2)
+                res.send(JSON.stringify(body2));
                 
                 // res.send(activity);
             }
