@@ -5,12 +5,12 @@ var request = require("request");
 
 router.post('/', (req, res) => {
     //client stuff
-    var rating = '1';
-    var price = '$$';
-    var date = '02-23-2020';
-    var day = 2;
-    var term = 'french';
-    var location = 'Philadelphia,PA';
+    var rating = req.body.popularity;
+    var price = '$$'; // fix in front-end
+    var date = req.body.date;
+    var day = 2; // extract from date
+    var term = req.body.food;
+    var location = `${req.body.city},${req.body.state}`;
 
     //yelp stuff
     const key = 'Bearer JwDTfcunrW6e44vbCZU71-qTTn2JQHCB8U2xfl3xZ6UrPl5VwzPQrg5F_auwixaTdSIe8-FKuPew9_qzbFBjokLyy83EL7GmlKl6aNuEXqJguv1fYCMyoOVGypZRXnYx';
