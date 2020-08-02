@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
     var date = '02-23-2020';
     var day = 2;
     var term = 'french';
-    var location = 'San%20Francisco,%20CA';
+    var location = 'Philadelphia,PA';
 
     //yelp stuff
     const key = 'Bearer JwDTfcunrW6e44vbCZU71-qTTn2JQHCB8U2xfl3xZ6UrPl5VwzPQrg5F_auwixaTdSIe8-FKuPew9_qzbFBjokLyy83EL7GmlKl6aNuEXqJguv1fYCMyoOVGypZRXnYx';
@@ -59,6 +59,7 @@ router.post('/', (req, res) => {
             console.log(index);
 
             var business = filteredBusiness[index];
+            console.log(business);
 
             
         };
@@ -87,16 +88,18 @@ router.post('/', (req, res) => {
                 console.log('error');
             } else {
                 const parsedBody = JSON.parse(body2);
-                var open = parsedBody.hours[0].open;
+                //var open = parsedBody.hours[0].open;
 
-                open = open.filter(time => day === time.day);
+                //times are throwing errors, so commenting out for now
+                //open = open.filter(time => day === time.day);
+                
+                //var start = open[0].start;
 
-                var start = open[0].start;
+                //var end = open[0].end;
 
-                var end = open[0].end;
-
-                res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions + ' || Opening Time: ' + start + ' || Closing Time: ' + end);
-
+                
+                //res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions + ' || Opening Time: ' + start + ' || Closing Time: ' + end);
+                res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions);
             }
         })
     });
