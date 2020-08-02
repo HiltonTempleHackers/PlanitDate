@@ -26,7 +26,7 @@ function btnClick(me, opposite){
     else if (me.id === 'btnNo'){
         document.getElementById('button').innerText = 'Submit';
         document.getElementById('button').onclick = async function() {
-            activityResp = await getActivity('http://localhost:3000/api/activity', choices)
+            activityResp = await postUserData('http://localhost:3000/api/activity', choices)
             console.log(activityResp);
         };
     }
