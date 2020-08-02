@@ -55,7 +55,7 @@ router.post('/', (req, res) => {
             
             var aLength = filteredActivity.length;
 
-            var aIndex = Math.floor((Math.random() * aLength) + 1);
+            var aIndex = Math.floor((Math.random() * aLength));
 
             console.log(aIndex);
 
