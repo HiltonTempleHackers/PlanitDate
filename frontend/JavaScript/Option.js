@@ -13,8 +13,9 @@ function ActivityOption() {
             <span style="width:35%" onclick="btnClick(this, 'btnYes')" class="btn  btn-lg btn-secondary btn-option" id="btnNo">No, submit what I have!</a>
         </p>
         <p class="lead">
-            <span id="button" class="btn btn-lg btn-secondary">Next</span>
+            <span id="button" onclick="sendFood(answers)" class="btn btn-lg btn-secondary">Next</span>
         </p>
 `;
+    console.log(answers);
     contentHolder.innerHTML = content;
 }

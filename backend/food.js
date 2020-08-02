@@ -3,14 +3,15 @@ const router = express.Router();
 
 var request = require("request");
 
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
+    console.log('processing...');
     //client stuff
-    var rating = '1';
-    var price = '$$';
-    var date = '02-23-2020';
-    var day = 2;
-    var term = 'french';
-    var location = 'San%20Francisco,%20CA';
+    var rating = req.body.popularity;
+    var price = '$$$$'; // fix in front-end
+    var date = req.body.date;
+    var day = 2; // extract from date
+    var term = req.body.food;
+    var location = `${req.body.city},${req.body.state}`;
 
     //yelp stuff
     const key = 'Bearer JwDTfcunrW6e44vbCZU71-qTTn2JQHCB8U2xfl3xZ6UrPl5VwzPQrg5F_auwixaTdSIe8-FKuPew9_qzbFBjokLyy83EL7GmlKl6aNuEXqJguv1fYCMyoOVGypZRXnYx';
@@ -46,21 +47,22 @@ router.get('/', (req, res) => {
                 }
             }));
 
-            filteredBusiness = filteredBusiness.filter(business => price === business.price);
-
-            filteredBusiness = filteredBusiness.filter(business => rating <= business.rating);
+            // need to be more lenient here/rethink how we use price and ratings (or if we even should -- maybe only return 5,4,3 star places?)
+            // user can still request a price, but we should loosen up the filter to avoid filtering all businesses out
+            // or handle empty response with a message to the user (this opens a can of worms...)
+            // commented because would often return an empty array causing crash
+            //filteredBusiness = filteredBusiness.filter(business => price === business.price);
+            //console.log(filteredBusiness);
+            // filteredBusiness = filteredBusiness.filter(business => rating <= business.rating);
+            // console.log(filteredBusiness);
 
             sentinel = true;
             
             var length = filteredBusiness.length;
 
-            var index = Math.floor((Math.random() * length) + 1);
-
-            console.log(index);
+            var index = Math.floor((Math.random() * length));
 
             var business = filteredBusiness[index];
-
-            
         };
 
         var name = business['name'];
@@ -87,16 +89,29 @@ router.get('/', (req, res) => {
                 console.log('error');
             } else {
                 const parsedBody = JSON.parse(body2);
-                var open = parsedBody.hours[0].open;
+                //var open = parsedBody.hours[0].open;
 
-                open = open.filter(time => day === time.day);
+                //times are throwing errors, so commenting out for now
+                //open = open.filter(time => day === time.day);
+                
+                //var start = open[0].start;
 
-                var start = open[0].start;
+                //var end = open[0].end;
 
-                var end = open[0].end;
+                res.header("Access-Control-Allow-Origin", "*");
 
-                res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions + ' || Opening Time: ' + start + ' || Closing Time: ' + end);
+               // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
+                //res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions + ' || Opening Time: ' + start + ' || Closing Time: ' + end);
+                
+                res.send(
+                    JSON.stringify({
+                        name: name,
+                        address: address,
+                        phone: phone,
+                        transactions: transactions,
+                    })
+                );
             }
         })
     });
