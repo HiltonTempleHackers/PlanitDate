@@ -1,7 +1,7 @@
 function question2(){
     //save previous question data to object
-    choices.state = document.getElementById('txtState').innerText;
-    choices.city = document.getElementById('txtCity').innerText;
+    choices.state = document.getElementById('txtState').value;
+    choices.city = document.getElementById('txtCity').value;
 
     var contentHolder = document.getElementById("contentArea");
     var content = `
