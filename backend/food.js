@@ -104,9 +104,20 @@ router.post('/', (req, res) => {
 
                 //var end = open[0].end;
 
-                
+                res.header("Access-Control-Allow-Origin", "*");
+
+               // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
                 //res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions + ' || Opening Time: ' + start + ' || Closing Time: ' + end);
-                res.send('Name: ' + name + ' || Address: ' + address + ' || Phone: ' + phone + ' || Other: ' + transactions);
+                
+                res.send(
+                    JSON.stringify({
+                        name: name,
+                        address: address,
+                        phone: phone,
+                        transactions: transactions,
+                    })
+                );
             }
         })
     });
