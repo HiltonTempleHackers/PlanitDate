@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
             
             var length = filteredBusiness.length;
 
-            var index = Math.floor((Math.random() * length) + 1);
+            var index = Math.floor((Math.random() * length));
 
             console.log(index);
 
