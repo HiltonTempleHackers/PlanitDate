@@ -42,8 +42,6 @@ router.post('/', (req, res) => {
             for (x in activityJS) {
                 console.log(x);
             }
-            console.log('\n\n\n');
-            console.log(activityJS.businesses);
 
             var filteredActivity = activityJS.businesses.filter(activity => activity.categories.filter(aCategory => {
                 if (aCategory.alias === aTerm) {
@@ -57,14 +55,9 @@ router.post('/', (req, res) => {
 
             var aIndex = Math.floor((Math.random() * aLength));
 
-            console.log(aIndex);
-
             var activity = filteredActivity[aIndex];
-            console.log(filteredActivity)
-            console.log(activity);
         };
         
-        console.log(activity);
         var aName = activity['name'];
         var aUrl = activity['url'];
         var aAddress = activity['location']['display_address'];
@@ -91,7 +84,6 @@ router.post('/', (req, res) => {
                 var aOpen = parsedBody.hours[0].open;
                 aOpen = aOpen.filter(aTime => aDay === aTime.day);
                 res.header("Access-Control-Allow-Origin", "*");
-                console.log(body2)
                 res.send(JSON.stringify(body2));
                 
                 // res.send(activity);

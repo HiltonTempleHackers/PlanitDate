@@ -40,7 +40,6 @@ router.post('/', (req, res) => {
             //console.log(response);
 
             const businessesJS = JSON.parse(body);
-            console.log(businessesJS);
 
             var filteredBusiness = businessesJS.businesses.filter(business => business.categories.filter(category => {
                 if (category.alias === term) {
@@ -63,12 +62,7 @@ router.post('/', (req, res) => {
 
             var index = Math.floor((Math.random() * length));
 
-            console.log(index);
-
             var business = filteredBusiness[index];
-            console.log(business);
-
-            
         };
 
         var name = business['name'];

@@ -33,5 +33,4 @@ function btnClick(me, opposite){
 
 
     console.log(choices);
-    console.log(me)
 }
