@@ -1,7 +1,7 @@
 ﻿function Question2(id) {
 
-    answers.state = document.getElementById("state").innerText;
-    answers.city = document.getElementById("city").innerText;
+    answers.state = document.getElementById("state").value;
+    answers.city = document.getElementById("city").value;
 
     var contentHolder = document.getElementById("Question");
 
