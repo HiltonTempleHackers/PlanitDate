@@ -4,6 +4,7 @@ const router = express.Router();
 var request = require("request");
 
 router.post('/', (req, res) => {
+    console.log('processing...');
     //client stuff
     var rating = req.body.popularity;
     var price = '$$$$'; // fix in front-end
@@ -49,6 +50,7 @@ router.post('/', (req, res) => {
 
             // need to be more lenient here/rethink how we use price and ratings (or if we even should -- maybe only return 5,4,3 star places?)
             // user can still request a price, but we should loosen up the filter to avoid filtering all businesses out
+            // or handle empty response with a message to the user (this opens a can of worms...)
             // commented because would often return an empty array causing crash
             //filteredBusiness = filteredBusiness.filter(business => price === business.price);
             //console.log(filteredBusiness);
