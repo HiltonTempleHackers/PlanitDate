@@ -6,7 +6,7 @@ var request = require("request");
 router.post('/', (req, res) => {
     //client stuff
     var rating = req.body.popularity;
-    var price = '$$'; // fix in front-end
+    var price = '$$$$'; // fix in front-end
     var date = req.body.date;
     var day = 2; // extract from date
     var term = req.body.food;
@@ -39,6 +39,7 @@ router.post('/', (req, res) => {
             //console.log(response);
 
             const businessesJS = JSON.parse(body);
+            console.log(businessesJS);
 
             var filteredBusiness = businessesJS.businesses.filter(business => business.categories.filter(category => {
                 if (category.alias === term) {
@@ -46,9 +47,13 @@ router.post('/', (req, res) => {
                 }
             }));
 
-            filteredBusiness = filteredBusiness.filter(business => price === business.price);
-
-            filteredBusiness = filteredBusiness.filter(business => rating <= business.rating);
+            // need to be more lenient here/rethink how we use price and ratings (or if we even should -- maybe only return 5,4,3 star places?)
+            // user can still request a price, but we should loosen up the filter to avoid filtering all businesses out
+            // commented because would often return an empty array causing crash
+            //filteredBusiness = filteredBusiness.filter(business => price === business.price);
+            //console.log(filteredBusiness);
+            // filteredBusiness = filteredBusiness.filter(business => rating <= business.rating);
+            // console.log(filteredBusiness);
 
             sentinel = true;
             
