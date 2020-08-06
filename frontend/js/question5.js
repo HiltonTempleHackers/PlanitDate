@@ -1,10 +1,8 @@
 function question5(){
     //save previous question data to object  
-
+    choices.date = document.getElementById("txtDate").value;
     
-    console.log(choices.date);
-    
-
+    console.log(choices);
 
     var contentHolder = document.getElementById("contentArea");
     var content = `
