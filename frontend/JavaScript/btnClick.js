@@ -23,7 +23,10 @@ function btnClick(me, opposite) {
     }
     else if (me.id === 'btnNo') {
         document.getElementById('button').innerText = 'Submit';
-        document.getElementById('button').onclick = function () { return null }; //function that will POST
+        document.getElementById('button').onclick = async function() {
+            foodResp = await postUserData('http://localhost:3000/api/food', answers).catch(e => console.log(e))
+            console.log(foodResp);
+        }; //function that will POST
     }
 
 
